@@ -77,10 +77,15 @@
 % \subsubsection{Base colors}
 %
 %    \begin{macrocode}
-\definecolor{mDarkBrown}{HTML}{604c38}
-\definecolor{mDarkTeal}{HTML}{23373b}
-\definecolor{mLightBrown}{HTML}{EB811B}
-\definecolor{mLightGreen}{HTML}{14B03D}
+\definecolor{jDarkPurple}{HTML}{450084}
+\definecolor{jPurple}{HTML}{B599CE}
+\definecolor{jLightPurple}{HTML}{DACCE6}
+\definecolor{jDarkGold}{HTML}{AD9C65}
+\definecolor{jGold}{HTML}{CBB677}
+\definecolor{jLightGold}{HTML}{F4EFE1}
+\definecolor{jText}{HTML}{333333}
+\definecolor{jAccentBlue}{HTML}{3C738B}
+\definecolor{jAccentGreen}{HTML}{5F791C}
 %    \end{macrocode}
 %
 %
@@ -93,22 +98,26 @@
 %    \begin{macrocode}
 \newcommand{\metropolis@colors@dark}{
   \setbeamercolor{normal text}{%
-    fg=black!2,
-    bg=mDarkTeal
+    fg=jText,
+    bg=white
   }
   \usebeamercolor[fg]{normal text}
 }
 \newcommand{\metropolis@colors@light}{
   \setbeamercolor{normal text}{%
-    fg=mDarkTeal,
-    bg=black!2
+    fg=jText,
+    bg=white
   }
 }
+\setbeamercolor{header text}{%
+    fg=jDarkPurple,
+    bg=jLightGold
+}
 \setbeamercolor{alerted text}{%
-  fg=mLightBrown
+  fg=jAccentGreen
 }
 \setbeamercolor{example text}{%
-  fg=mLightGreen
+  fg=jAccentBlue
 }
 %    \end{macrocode}
 %
@@ -127,7 +136,7 @@
 \setbeamercolor{author}{use=normal text, parent=normal text}
 \setbeamercolor{date}{use=normal text, parent=normal text}
 \setbeamercolor{institute}{use=normal text, parent=normal text}
-\setbeamercolor{structure}{use=normal text, fg=normal text.fg}
+\setbeamercolor{structure}{use=normal text, fg=jGold}
 %    \end{macrocode}
 %
 % The “primary” palette should be used for the most important navigational
@@ -141,8 +150,9 @@
   bg=normal text.fg
 }
 \setbeamercolor{frametitle}{%
-  use=palette primary,
-  parent=palette primary
+  use=header text,
+  fg=header text.fg,
+  bg=header text.bg
 }
 %    \end{macrocode}
 %
@@ -154,9 +164,9 @@
 %
 %    \begin{macrocode}
 \setbeamercolor{progress bar}{%
-  use=alerted text,
-  fg=alerted text.fg,
-  bg=alerted text.fg!50!black!30
+  use=header text,
+  fg=header text.fg,
+  bg=jGold
 }
 \setbeamercolor{title separator}{
   use=progress bar,

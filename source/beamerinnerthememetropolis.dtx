@@ -103,7 +103,8 @@
 %    \begin{macrocode}
 \setbeamertemplate{title page}{
   \begin{minipage}[b][\paperheight]{\textwidth}
-    \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+    \vspace*{2em}
+    \hfill\inserttitlegraphic
     \vfill%
     \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
     \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
